@@ -1,7 +1,4 @@
-const assoc = (key, value, object) => {
-	object[key] = value;
-	return { ...object, [key]: object[key] };
-};
+const assoc = (key, value, object) =>({...object, [key]:value})
 console.log(assoc('name', 'Bobo', {}));
 console.log(assoc('age', 25, { name: 'Bobo' }));
 console.log(assoc('bestFriend', { name: 'Bruce Wayne' }, { name: 'Bobo' }));
